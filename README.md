@@ -5,12 +5,12 @@ The build containes an x86 emulator, QEMU, for running a kernel; and a compiler 
 Steps:
 1. This will pull the image to your machine.
 
-``` docker pull dineshauti/rtos:v1.0 ```
+	``` docker pull dineshauti/rtos:v1.0 ```
 
 2. This will map a folder named rtoslabs on your Desktop inside the container. This is where all your labs will reside. So any changes that you make inside this folder will be dynamically reflected inside the container and vise-versa. The container will start and run in the background.
 
-``` docker run -it -d -v "c:/Users/$user/Desktop/rtoslabs":/root/rtoslabs -w /root/rtoslabs --name rtos dineshauti/rtos:dev bash ```
+	``` docker run -it -d -v "c:/Users/$user/Desktop/rtoslabs":/root/rtoslabs -w /root/rtoslabs --name rtos dineshauti/rtos:dev bash ```
 
 3. This command will spwan a new bash process inside the already running container and connect to it. You can execute commands in the bash. Type 'exit' to exit the bash process inside the container. Note that the container is still running in the background.
 
-``` docker exec -it rtos bash ```
+	``` docker exec -it rtos bash ```
